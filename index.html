@@ -13,40 +13,39 @@
     <div class="container">
         <div class="jumbotron" id="header">
             <h2>Welcome to Pizza-Inn</h2>
-
             <p> We offer a great collection of delicious pizzas</p>
-
             <p> We hope you have a a great experience</p>
-
         </div>
         <h2>Select your pizza size below:</h2>
         <div class="row">
             <div class="col-md-4">
                 <img src="./img/medium.jpeg" alt="">
-                <h6>Small</h6>
+                <h6>Small ($5.00)</h6>
                 <p>This one is enough for one individual</p>
-                <button> Select </button>
+                <button class="small" id="small" onclick=""> Select </button>
             </div>
             <div class="col-md-4">
                 <img src="./img/small.jpeg" alt="">
-                <h6>Medium</h6>
+                <h6>Medium ($7.00)</h6>
                 <p>This one is good for 3 or 4 people</p>
-                <button>Select</button>
+                <button class="medium" id="medium" onclick="">Select</button>
             </div>
             <div class="col-md-4">
                 <img src="./img/large.jpeg" alt="">
-                <h6>Large</h6>
+                <h6>Large ($9.00)</h6>
                 <p>This one is good for 6 or 7 people</p>
-                <button>Select</button>
+                <button class="large" id="large" onclick="">Select</button>
             </div>
-
         </div>
         <div class="jumbotron">
-            <button>Cancel</button>
-            <button onclick="window.location.href='crust.html';">Continue</button>
+            <button id="cancel">Cancel</button>
+            <button id="continue" onclick="window.location.href='crust.html';">Continue</button>
         </div>
-
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script type='text/javascript' src="js/app.js"></script>
 </body>
 
 </html>
