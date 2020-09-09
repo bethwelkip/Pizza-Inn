@@ -14,29 +14,30 @@
         <div class="jumbotron">
             <h2>Here is your order</h2>
             <br></br>
-
             <div class="row">
                 <div class="col-8">
-
                     <h4 class="cart" id="cart"> <span class="price" style="color:black"><i class="shopping-cart"></i>
                             <b></b></span>
                     </h4>
-                    <p><a href="#">Pizza Size</a> <span class="price">$15</span></p>
-                    <p><a href="#">Pizza Crust</a> <span class="price">$5</span></p>
-                    <p><a href="#">Pizza Toppings</a> <span class="price">$8</span></p>
-                    <p><a href="#">Delivery Fee</a> <span class="price">$2</span></p>
+                    <p><a href="#">Pizza Size</a> <span class="price" id="size-price">$</span></p>
+                    <p><a href="#">Pizza Crust</a> <span class="price" id="crust-price">$</span></p>
+                    <p><a href="#">Pizza Toppings</a> <span class="price" id="topping-price">$</span></p>
+                    <p><a href="#">Delivery Fee</a> <span class="price" id="delivery-price">$</span></p>
                     <hr>
-                    <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
-
+                    <p>Total <span class="price" id="total-price" style="color:black"><b>$</b></span></p>
                 </div>
             </div>
-
         </div>
         <div class="jumbotron">
-            <input type="submit" value="Continue to checkout" class="btn">
+            <input type="submit" onclick="finalPrice();" value="Continue to checkout" class="btn">
+            <br></br>
+            <h4 class="total-charge">Your Total Charge is: <div class="total-charge" id="total-charge">$</div>
+            </h4>
         </div>
     </div>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script type='text/javascript' src="js/app.js"></script>
 </body>
 
 </html>
