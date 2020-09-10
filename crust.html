@@ -9,40 +9,50 @@
     <title>Choose A Crust</title>
 </head>
 
-<body>
+<body onload="crust();">
     <div class="container">
         <div class="jumbotron">
             <h1>Thanks for choosing your pizza size!</h1>
             <br></br>
             <p>Now, choose the crust that speaks to your appetite!</p>
-            <div>Each Pizza Crust costs: <div class="crust-cost"> $ </div>
+            <div>Each Pizza Crust costs:
+                <div class="crust-cost" id="crusty-cost">
+                </div>
             </div>
         </div>
         <div class="jumbotron">
-            <div class="row" id="toppings1">
+            <div class="row" id="toppingsx">
                 <div class="col-md-6"><img src="./img/italian.jpeg" alt="">
                     <h6>Italian Crust</h6>
-                    <button class="italian" id="italian" onclick="">Select</button>
+                    <h5 id="italian-crust"></h5>
+                    <button class="italian" id="italian" onclick="window.location.href='toppings.html';"
+                        style="background-color: greenyellow;">Select</button>
                 </div>
                 <div class="col-md-6"><img src="./img/pizza-2530169_1920.jpg" alt="">
                     <h6>Thin Crust</h6>
-                    <button class="thin" id="thin" onclick="">Select</button>
+                    <h5 id="thin-crust"></h5>
+                    <button class="thin" id="thin" onclick="window.location.href='toppings.html';"
+                        style="background-color: greenyellow;">Select</button>
                 </div>
             </div>
-            <div class="row" id="toppings2">
+            <div class="row" id="toppingsx">
                 <div class="col-md-6"><img src="./img/WhatsApp Image 2020-09-08 at 20.01.52.jpeg" alt="">
                     <h6>Hard Crust</h6>
-                    <button class="hard" id="hard" onclick="">Select</button>
+                    <h5 id="hard-crust"></h5>
+                    <button class="hard" id="hard" onclick="window.location.href='toppings.html';"
+                        style="background-color: greenyellow;">Select</button>
                 </div>
                 <div class="col-md-6"><img src="./img/WhatsApp Image 2020-09-08 at 20.12.20.jpeg" alt="">
                     <h6>Thick Crust</h6>
-                    <button class="thick" id="thick" onclick="">Select</button>
+                    <h5 id="thick-crust"></h5>
+                    <button class="thick" id="thick" onclick="window.location.href='toppings.html';"
+                        style="background-color: greenyellow;">Select</button>
                 </div>
             </div>
         </div>
         <div class="jumbotron">
-            <button onclick="window.location.href='index.html';">Back</button>
-            <button onclick="window.location.href='toppings.html'; ">Continue</button>
+            <button onclick="window.location.href='index.html';" id="cancel" style="float: center;">Back</button>
+
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.js"
