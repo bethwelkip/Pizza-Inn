@@ -13,7 +13,7 @@
     background-repeat: no-repeat;
     padding-bottom: 5%;
 }
-#toppings1 img, #toppings2 img{
+#toppingsx img, #toppings2 img{
    object-fit: contain;
    max-width: 100%;
 }
@@ -25,7 +25,9 @@
 background-size: cover;
 filter: alpha(opacity=80);
 }
-
+#btnn{
+    padding-right: 2%;
+}
 #checkout img{
     opacity: 0.1;
 }
@@ -42,7 +44,7 @@ span.price {
     padding-top: 20px;
     padding-bottom: 10px;
       }
-      
+
  /*** buttons ***/
 
 .btn {
@@ -67,13 +69,21 @@ span.price {
 
   #cancel {
     float:center;
-     margin-right: 3%; 
+     margin-right: 0%; 
      background-color: red;
 
   }
-  #continue{
+  .continue {
     float:center;
      margin-right: 3%; 
-     background-color: green;
+     background-color: greenyellow;
   }
   /* ********************** */
+  
+  @media only screen and (max-width: 768px) {
+    [class*="col-"] {
+      width: 100%;
+    }
+    .btn{
+        font-size:50% ;
+  }}
