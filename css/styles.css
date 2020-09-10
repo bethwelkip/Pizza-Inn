@@ -1,8 +1,14 @@
+html{
+    scroll-behavior: smooth;
+}
 .container{
-    height: 100vh;
+    /*height: 100vh; */
+    margin-bottom:4% ;
 }
 *{
     text-align: center;
+    margin-left: 0;
+    margin-right: 0;
 }
 .jumbotron{
     background-color: transparent;
@@ -12,6 +18,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     padding-bottom: 5%;
+    height: 200%;
 }
 #toppingsx img, #toppings2 img{
    object-fit: contain;
@@ -85,5 +92,5 @@ span.price {
       width: 100%;
     }
     .btn{
-        font-size:50% ;
+        font-size:70% ;
   }}
