@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="landing">
         <div class="jumbotron" id="header">
             <h2>Welcome to Pizza-Inn</h2>
             <p> We offer a great collection of delicious pizzas</p>
@@ -42,10 +42,177 @@
             </div>
         </div>
         <div class="jumbotron">
-            <button id="cancel">Cancel</button>
-            <button class="continue" id="continue" onclick="window.location.href='crust.html'">Continue</button>
+            <button id="cancel" onclick=""> <a href="#landing">Back</a></button>
+            <button class="continue" id="continue" onclick="crust(); toppings();"> <a
+                    href="#crusting">Continue</a></button>
         </div>
     </div>
+
+    <!-- 
+
+
+ crusts start here
+
+ -->
+    <div class="container" id="crusting">
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Thanks for choosing your pizza size!</h1>
+                <br></br>
+                <p>Now, choose the crust that speaks to your appetite!</p>
+                <div>Each Pizza Crust costs:
+                    <div class="crust-cost" id="crusty-cost">
+                    </div>
+                </div>
+            </div>
+            <div class="jumbotron">
+                <div class="row" id="toppingsx">
+                    <div class="col-md-6"><img src="./img/italian.jpeg" alt="">
+                        <h6>Italian Crust</h6>
+                        <h5 id="italian-crust"></h5>
+                        <button class="italian" id="italian" onclick="window.location.href='toppings.html';"
+                            style="background-color: greenyellow;">Select</button>
+                    </div>
+                    <div class="col-md-6"><img src="./img/pizza-2530169_1920.jpg" alt="">
+                        <h6>Thin Crust</h6>
+                        <h5 id="thin-crust"></h5>
+                        <button class="thin" id="thin" onclick="window.location.href='toppings.html';"
+                            style="background-color: greenyellow;">Select</button>
+                    </div>
+                </div>
+                <div class="row" id="toppingsx">
+                    <div class="col-md-6"><img src="./img/WhatsApp Image 2020-09-08 at 20.01.52.jpeg" alt="">
+                        <h6>Hard Crust</h6>
+                        <h5 id="hard-crust"></h5>
+                        <button class="hard" id="hard" onclick="window.location.href='toppings.html';"
+                            style="background-color: greenyellow;">Select</button>
+                    </div>
+                    <div class="col-md-6"><img src="./img/WhatsApp Image 2020-09-08 at 20.12.20.jpeg" alt="">
+                        <h6>Thick Crust</h6>
+                        <h5 id="thick-crust"></h5>
+                        <button class="thick" id="thick" onclick="window.location.href='toppings.html';"
+                            style="background-color: greenyellow;">Select</button>
+                    </div>
+                </div>
+            </div>
+            <div class="jumbotron">
+                <button onclick="" id="cancel" style="float: center;"><a href="#landing">Back</a></button>
+                <button class="continue" id="continue" onclick=""> <a href="#tops">Continue</a></button>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--
+
+
+toppings start here
+
+-->
+
+    <div class="container" id="tops">
+        <div class="jumbotron">
+            <br></br>
+            <h1>Thanks for choosing your preferred crust!</h1>
+            <br></br>
+            <p>Now that you have chosen your crust, please
+                choose what kind of toppings you would like to see on your
+                delicious pizza</p>
+        </div>
+        <div class="jumbotron">
+            <div class="row" id="toppingsx">
+                <div class="col-md-4"><img src="./img/italian.jpeg" alt="">
+                    <div>Fruit Topping</div>
+                    <h5 id="fruit-topping"></h5>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="toppings1">
+                        <label class="form-check-label" for="toppings">Add This Topping</label>
+                    </div>
+                </div>
+                <div class="col-md-4"><img src="./img/pizza-2530169_1920.jpg" alt="">
+                    <div>Spinach Topping</div>
+                    <h5 id="spinach-topping"></h5>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="toppings2">
+                        <label class="form-check-label" for="toppings">Add This Topping</label>
+                    </div>
+                </div>
+                <div class="col-md-4"><img src="./img/pexels-pixabay-280453.jpg" alt="">
+                    <div>Pepperoni Topping</div>
+                    <h5 id="pepperoni-topping"></h5>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="toppings3">
+                        <label class="form-check-label" for="toppings">Add This Topping</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="toppingsx">
+                <div class="col-md-4"><img src="./img/tomato-top.jpg" alt="">
+                    <div>Tomato Topping</div>
+                    <h5 id="tomato-topping"></h5>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="toppings4">
+                        <label class="form-check-label" for="toppings">Add This Topping</label>
+                    </div>
+                </div>
+                <div class="col-md-4"><img src="./img/WhatsApp Image 2020-09-08 at 20.01.52.jpeg" alt="">
+                    <div>Kale Topping</div>
+                    <h5 id="kale-topping"></h5>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="toppings5">
+                        <label class="form-check-label" for="toppings">Add This Topping</label>
+                    </div>
+
+                </div>
+                <div class="col-md-4"><img src="./img/WhatsApp Image 2020-09-08 at 20.12.20.jpeg" alt="">
+                    <div>Cheese Topping</div>
+                    <h5 id="cheese-topping"></h5>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="toppings6">
+                        <label class="form-check-label" for="toppings">Add This Topping</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="jumbotron">
+            <button onclick="" class="cancel" id="cancel"><a href="#landing">Back</a></button>
+            <button onclick="window.location.href='checkout.html';" class="continue">Proceed To Checkout</button>
+        </div>
+    </div>
+    <!--
+     checkout starts here
+
+        -->
+    <div class="container" id="checkout">
+        <div class="jumbotron">
+            <h2>Here is your order</h2>
+            <br></br>
+            <div class="row">
+                <div class="col-8">
+                    <h4 class="cart" id="cart"> <span class="price" style="color:black"><i class="shopping-cart"></i>
+                            <b></b></span>
+                    </h4>
+                    <p><a href="#">Pizza Size</a> <span class="price" id="size-price">$</span></p>
+                    <p><a href="#">Pizza Crust</a> <span class="price" id="crust-price">$</span></p>
+                    <p><a href="#">Pizza Toppings</a> <span class="price" id="topping-price">$</span></p>
+                    <p><a href="#">Delivery Fee</a> <span class="price" id="delivery-price">$</span></p>
+                    <hr>
+                    <p>Total <span class="price" id="total-price" style="color:black"><b>$</b></span></p>
+                </div>
+            </div>
+        </div>
+        <div class="jumbotron">
+            <input type="submit" onclick="finalPrice();" value="Continue to checkout" class="btn" id="btnn">
+            <br></br>
+            <h4 class="total-charge">Your Total Charge is: <div class="total-charge" id="total-charge">$</div>
+            </h4>
+        </div>
+    </div>
+
+
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
