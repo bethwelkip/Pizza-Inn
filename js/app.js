@@ -47,12 +47,12 @@ function crust() {
 }
 function toppings() {
     if (myPizza.size === "Large") {
-        document.getElementById("fruit-topping").innerHTML = "$1.00";
-        document.getElementById("kale-topping").innerHTML = "$1.00";
-        document.getElementById("pepperoni-topping").innerHTML = "$1.00";
-        document.getElementById("spinach-topping").innerHTML = "$1.00";
-        document.getElementById("tomato-topping").innerHTML = "$1.00";
-        document.getElementById("cheese-topping").innerHTML = "$1.00";
+        document.getElementById("fruit-topping").innerHTML = "$3.00";
+        document.getElementById("kale-topping").innerHTML = "$3.00";
+        document.getElementById("pepperoni-topping").innerHTML = "$3.00";
+        document.getElementById("spinach-topping").innerHTML = "$3.00";
+        document.getElementById("tomato-topping").innerHTML = "$3.00";
+        document.getElementById("cheese-topping").innerHTML = "$3.00";
 
     }
     else if (myPizza.size === "Medium") {
@@ -65,12 +65,12 @@ function toppings() {
 
     }
     else {
-        document.getElementById("fruit-topping").innerHTML = "$3.00";
-        document.getElementById("kale-topping").innerHTML = "$3.00";
-        document.getElementById("pepperoni-topping").innerHTML = "$3.00";
-        document.getElementById("spinach-topping").innerHTML = "$3.00";
-        document.getElementById("tomato-topping").innerHTML = "$3.00";
-        document.getElementById("cheese-topping").innerHTML = "$3.00";
+        document.getElementById("fruit-topping").innerHTML = "$1.00";
+        document.getElementById("kale-topping").innerHTML = "$1.00";
+        document.getElementById("pepperoni-topping").innerHTML = "$1.00";
+        document.getElementById("spinach-topping").innerHTML = "$1.00";
+        document.getElementById("tomato-topping").innerHTML = "$1.00";
+        document.getElementById("cheese-topping").innerHTML = "$1.00";
 
 
     }
@@ -83,9 +83,12 @@ function Pizza() {
     this.crust = "";
     this.delivery = 0;
     this.charge = 0;
-    this.totalCharge = this.charge + this.delivery
+    this.toppingPrice = 0;
 }
 var myPizza = new Pizza();
+myPizza.prototype.totalCharge = function () {
+    myPizza.charge + myPizza.delivery
+};
 
 
 function finalPrice() {
@@ -93,5 +96,5 @@ function finalPrice() {
     document.getElementById("crust-price").innerHTML = "$" + myPizza.crustPrice;
     document.getElementById("topping-price").innerHTML = "$" + myPizza.toppingPrice;
     document.getElementById("delivery-price").innerHTML = "$" + myPizza.delivery;
-    document.getElementById("total-charge").innerHTML = "$" + myPizza.totalcCharge;
+    document.getElementById("total-charge").innerHTML = "$" + myPizza.totalCharge();
 };
