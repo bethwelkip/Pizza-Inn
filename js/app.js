@@ -111,7 +111,19 @@ var myPizza = new Pizza();
 Pizza.prototype.totalCharge = function () {
     return myPizza.sizeCharge + myPizza.crustCharge + myPizza.toppingCharge + myPizza.delivery;
 };
+function newFinalPrice() {
+    var price = myPizza.totalCharge()
+    reset();
+    console.log(myPizza.totalCharge());
+    console.log(myPizza.size());// = price;
 
+}
+function reset() {
+    document.getElementsByName("delivery").reset;
+    document.getElementsByName("toppings").reset;
+    document.getElementsByName("crust").reset;
+    document.getElementsByName("size").reset;
+}
 
 function finalPrice() {
     document.getElementById("size-price").innerHTML = "$" + myPizza.sizeCharge;
@@ -120,3 +132,4 @@ function finalPrice() {
     document.getElementById("delivery-price").innerHTML = "$" + myPizza.delivery;
     document.getElementById("total-charge").innerHTML = "$" + myPizza.totalCharge();
 };
+
