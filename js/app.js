@@ -1,21 +1,43 @@
 function small() {
     myPizza.size = "Small";
     myPizza.sizeCharge = 5;
-    //myPizza.prototype.toppingPrice = 1.5;
+    myPizza.crustCharge = 1.50;
+    myPizza.toppingCharge = 1.00;
 };
 
 function medium() {
     myPizza.size = "Medium";
     myPizza.sizeCharge = 7;
-    // myPizza.prototype.toppingPrice = 2.0;
+    myPizza.crustCharge = 2.00;
+    myPizza.toppingCharge = 2.00;
 
 };
 
 function large() {
     myPizza.size = "Large";
     myPizza.sizeCharge = 9;
-    //myPizza.prototype.toppingPrice = 2.5;
-    console.log(myPizza.sizeCharge);
+    myPizza.crustCharge = 2.50;
+    myPizza.toppingCharge = 3.00;
+
+};
+
+function delivery() {
+
+    myPizza.delivery = 1.5;
+    prompt("Where would you like to have your pizza delivered. Enter Estate Name");
+    alert("Your delivery fees would be $1.5!")
+
+};
+function checkedToppings() {
+    var checked = 0;
+    if (document.getElementById("toppings1").checked) { checked++; }
+    if (document.getElementById("toppings2").checked) { checked++; }
+    if (document.getElementById("toppings3").checked) { checked++; }
+    if (document.getElementById("toppings4").checked) { checked++; }
+    if (document.getElementById("toppings5").checked) { checked++; }
+    if (document.getElementById("toppings6").checked) { checked++; }
+    myPizza.toppingCharge *= checked;
+    console.log(myPizza.toppingCharge);
 }
 
 function crust() {
@@ -80,18 +102,21 @@ function Pizza() {
     this.crust = "";
     this.delivery = 0;
     this.sizeCharge = 0;
-    this.toppingPrice = 0;
+    this.toppingCharge = 0;
+    this.crustCharge = 0;
 }
+
 var myPizza = new Pizza();
-//myPizza.prototype.totalCharge = function () {
-//   myPizza.charge + myPizza.delivery
-//};
+
+Pizza.prototype.totalCharge = function () {
+    return myPizza.sizeCharge + myPizza.crustCharge + myPizza.toppingCharge + myPizza.delivery;
+};
 
 
 function finalPrice() {
     document.getElementById("size-price").innerHTML = "$" + myPizza.sizeCharge;
-    document.getElementById("crust-price").innerHTML = "$" + myPizza.crustPrice;
-    document.getElementById("topping-price").innerHTML = "$" + myPizza.toppingPrice;
+    document.getElementById("crust-price").innerHTML = "$" + myPizza.crustCharge;
+    document.getElementById("topping-price").innerHTML = "$" + myPizza.toppingCharge;
     document.getElementById("delivery-price").innerHTML = "$" + myPizza.delivery;
-    //document.getElementById("total-charge").innerHTML = "$" + myPizza.totalCharge();
+    document.getElementById("total-charge").innerHTML = "$" + myPizza.totalCharge();
 };
